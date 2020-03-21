@@ -14,4 +14,16 @@ function addTask(event) {
     completed: false
   });
   $(".js-addTask-input").val("");
+  renderList();
+}
+
+function renderList() {
+  $(".js-task-ul").empty();
+  for (let item of tasks) {
+    $(".js-task-ul").append(`
+    <li>
+        ${item.name}<button class="js-taskComplete-btn">Complete</button>
+      </li>
+    `);
+  }
 }
