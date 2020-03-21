@@ -5,6 +5,7 @@ $(document).ready(init);
 function init() {
   console.log("jq-on");
   $(".js-addTask-form").on("submit", addTask);
+  $(".js-task-ul").on("click", ".js-taskComplete-btn", completeTask);
 }
 
 function addTask(event) {
@@ -17,13 +18,21 @@ function addTask(event) {
   renderList();
 }
 
+function completeTask() {
+  console.log($(this).parent()); // TODO: Finish getting data from index
+}
+
 function renderList() {
   $(".js-task-ul").empty();
-  for (let item of tasks) {
-    $(".js-task-ul").append(`
+  for (let i = 0; i < tasks.length; i++) {
+    $(".js-task-ul")
+      .append(
+        `
     <li>
-        ${item.name}<button class="js-taskComplete-btn">Complete</button>
+        ${tasks[i].name}<button class="js-taskComplete-btn">Complete</button>
       </li>
-    `);
+    `
+      )
+      .data("index", i);
   }
 }

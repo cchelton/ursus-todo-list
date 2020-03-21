@@ -17,21 +17,27 @@
     </header>
 
     <!-- ASSIGNMENT CONTENT GOES BELOW HERE -->
-    <form class="js-addTask-form">
-      <label for="name">New Task: </label>
-      <input
-        class="js-addTask-input"
-        name="name"
-        placeholder="Enter New Task"
-      />
-      <button class="js-addTask-btn">Add Task</button>
-    </form>
-    <h3>My Todo List</h3>
-    <ul class="js-task-ul">
-      <li>
-        There are no tasks<button class="js-taskComplete-btn">Complete</button>
-      </li>
-    </ul>
+    <div class=".appBar">
+      <form class="js-addTask-form panel">
+        <label class="fieldLabel" for="name">New Task: </label>
+        <input
+          class="js-addTask-input field"
+          name="name"
+          placeholder="Enter New Task"
+        />
+        <button class="js-addTask-btn btn btn_fullWidth">Add Task</button>
+      </form>
+      <div class="panel">
+        <h3>My Todo List</h3>
+        <ul class="js-task-ul stackedList">
+          <li>
+            There are no tasks<button class="js-taskComplete-btn btn">
+              Complete
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
     <footer class="footer">
       &copy; Prime Digital Academy
     </footer>
