@@ -31,7 +31,7 @@ function renderList() {
       $(".js-task-ul").append(
         `
       <li class="isComplete">
-          ${tasks[i].name}<button  data-index=${i} class="js-taskComplete-btn btn">Complete</button>
+          ${tasks[i].name}<button  data-index=${i} class="js-taskComplete-btn btn" disabled>Complete</button>
         </li>
       `
       );
